@@ -11,7 +11,7 @@
 
 ## ⚙ How it works ?!
 -------------------
-**User need to enter any five number and click on sort button it will direct you to then menu where user will find different sorting alogithms**
+**User need to enter any five number and click on sort button it will direct you to the sorting menu where user will find different sorting alogithms**
 
 **select any of the algorithm and your sorted array with visualisation and code is ready**
 
