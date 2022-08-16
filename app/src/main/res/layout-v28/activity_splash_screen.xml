@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_blue"
     tools:context=".splashScreen">
     <ImageView
         android:layout_centerInParent="true"
@@ -16,10 +17,10 @@
         android:padding="20dp"
         android:textAlignment="center"
         android:textSize="26sp"
-        android:textColor="@color/yellow"
+        android:layout_marginBottom="50dp"
+        android:textColor="@color/lightGreen"
         android:layout_alignParentBottom="true"
-        android:textStyle="bold"
-        android:shadowColor="@color/black"
-        android:shadowDx="@integer/material_motion_duration_long_2"
+        android:textStyle="italic"
+        android:textFontWeight="500"
         android:layout_height="wrap_content"/>
 </RelativeLayout>
