@@ -1,4 +1,6 @@
 ## 📊 Sorting Visulizer 
+
+[<img src = "https://user-images.githubusercontent.com/89351750/185594285-8244c3e4-3a05-46fd-a907-fac475daa197.png" width="190" height="70">](https://www.amazon.com/dp/B0B8WC2PJ3/ref=apps_sf_sta)
 <div align="center">
 <img src="https://user-images.githubusercontent.com/89351750/183245113-c6056159-a0c9-4411-8f29-91d3b6ffe3d7.png"  width="200" height="200">
 </div>
