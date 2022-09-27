@@ -10,6 +10,8 @@ class sorting_menu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sorting_menu)
+
+        setTitle("Menu")
         //getting values from the intent
         val one = intent.getStringExtra("one")
         val two = intent.getStringExtra("two")
