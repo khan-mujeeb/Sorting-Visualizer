@@ -13,6 +13,7 @@
     <color name="picton_blue">#154c79</color>
     <color name="red">#F72C1C</color>
     <color name="green">#2CA726</color>
+    <color name="anti_flash_white">#EBEBEB</color>
     <color name="yellow">#DAE521</color>
     <color name="lightGreen">#21E58E</color>
 </resources>

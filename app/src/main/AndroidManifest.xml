@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SortingVisualizer">
         <activity
-            android:name=".splashScreen"
+            android:name=".ui.splashScreen"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,25 +22,25 @@
             android:name=".insertion_sort_code"
             android:exported="false" />
         <activity
-            android:name=".insertion_sort"
+            android:name=".ui.insertion_sort"
             android:exported="false" />
         <activity
             android:name=".selection_sort_code"
             android:exported="false" />
         <activity
-            android:name=".selectionSort"
+            android:name=".ui.selectionSort"
             android:exported="false" />
         <activity
             android:name=".bubble_sort_code"
             android:exported="false" />
         <activity
-            android:name=".bubbleSort"
+            android:name=".ui.bubbleSort"
             android:exported="false" />
         <activity
-            android:name=".sorting_menu"
+            android:name=".ui.sorting_menu"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="false">
 
         </activity>

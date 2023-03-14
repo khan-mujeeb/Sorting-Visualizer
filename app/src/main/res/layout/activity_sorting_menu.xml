@@ -7,7 +7,7 @@
     android:background="@color/dark_blue"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".sorting_menu">
+    tools:context=".ui.sorting_menu">
     <TextView
         android:layout_width="match_parent"
         android:text="SORTING ALGORITHM"

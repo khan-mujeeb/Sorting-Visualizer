@@ -1,24 +1,28 @@
-package com.example.sortingvisualizer
+package com.example.sortingvisualizer.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import java.util.*
+import com.example.sortingvisualizer.MyAdaptor
+import com.example.sortingvisualizer.R
+import com.example.sortingvisualizer.bubble_sort_code
+import com.example.sortingvisualizer.row
 
-class selectionSort : AppCompatActivity() {
+
+class bubbleSort : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_selection_sort)
-        setTitle("Selection Sort")
-        val codeBtn: CardView = findViewById(R.id.code)
+        setContentView(R.layout.activity_bubble_sort)
+        setTitle("Bubble Sort")
+        val codeBtn:CardView = findViewById(R.id.code)
 
         codeBtn.setOnClickListener(View.OnClickListener {
-            val go: Intent = Intent(this,selection_sort_code::class.java)
+            val go: Intent = Intent(this, bubble_sort_code::class.java)
             startActivity(go)
         })
 
@@ -53,35 +57,42 @@ class selectionSort : AppCompatActivity() {
 
 
         //bubble sort algorithm
-//        var j: Int
-//        var i: Int = 0
+        var j: Int
+        var i: Int = 0
 
 //        var temp = mutableListOf<Int>()
         var dataToPass = mutableListOf<row>()
-        var i: Int = 0
-        var j: Int = 0
+//        dataToPass.add(row(listA[0],listA[1],listA[2],listA[3],listA[4]))
+            while (i < 4) {
+                j = 0
 
-        dataToPass.add(row(listA[0],listA[1],listA[2],listA[3],listA[4],-1,-1))
-        while(i<4) {
-            var temp:Int = i
-            j = i+1
-            while(j<5) {
-                if(listA[j]<listA[temp])
-                    temp = j
-                j++
+                while (j < 5 - i - 1) {
+                    var posa:Int = -1
+                    var posb:Int = -1
+                    if (listA.get(j) > listA.get(j + 1)) {
+                        var a = listA.get(j)
+                        var b = listA.get(j + 1)
+                        listA[j] = b
+                        listA[j+1] = a
+                        posa = j
+                        posb = j+1
+                    }
+
+
+                    dataToPass.add(row(listA[0],listA[1],listA[2],listA[3],listA[4],posa,posb))
+                    j++
+                }
+
+                i++
             }
-            Collections.swap(listA, i, temp)
-            dataToPass.add(row(listA[0],listA[1],listA[2],listA[3],listA[4],i,temp))
-            i++
-        }
 
-        dataToPass.add(row(listA[0],listA[1],listA[2],listA[3],listA[4],-1,-1))
-        //setting content of sorted array
-        val e1 = findViewById<TextView>(R.id.asOne)
-        val e2 = findViewById<TextView>(R.id.astwo)
-        val e3 = findViewById<TextView>(R.id.asthree)
-        val e4 = findViewById<TextView>(R.id.asfour)
-        val e5 = findViewById<TextView>(R.id.asfive)
+//        dataToPass.add(row(listA[0],listA[1],listA[2],listA[3],listA[4]))
+            //setting content of sorted array
+            val e1 = findViewById<TextView>(R.id.asOne)
+            val e2 = findViewById<TextView>(R.id.astwo)
+            val e3 = findViewById<TextView>(R.id.asthree)
+            val e4 = findViewById<TextView>(R.id.asfour)
+            val e5 = findViewById<TextView>(R.id.asfive)
 
         e1.text = listA[0].toString()
         e2.text = listA[1].toString()
@@ -91,7 +102,9 @@ class selectionSort : AppCompatActivity() {
 
 
         var x = findViewById<RecyclerView>(R.id.bSortList)
-        x.adapter = MyAdaptor(dataToPass)
-        x.layoutManager = LinearLayoutManager(this)
+                x.adapter = MyAdaptor(dataToPass)
+                x.layoutManager = LinearLayoutManager(this)
+
     }
 }
+

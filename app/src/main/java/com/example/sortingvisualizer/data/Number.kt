@@ -1,4 +1,4 @@
-package com.example.sortingvisualizer
+package com.example.sortingvisualizer.data
 
 public class number(
     var one:String ,

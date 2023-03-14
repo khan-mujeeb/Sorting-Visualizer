@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
@@ -45,6 +46,13 @@ class MyAdaptor(val dataList: List<row>): RecyclerView.Adapter<MyAdaptor.MyViewH
             3->holder.txt4.setBackgroundColor(Color.parseColor("#DAE521"))
             4->holder.txt5.setBackgroundColor(Color.parseColor("#DAE521"))
         }
+
+        holder.itemView.startAnimation(
+            AnimationUtils.loadAnimation(
+                holder.itemView.context,
+                 R.anim.rc_animation
+            )
+        )
 
     }
 

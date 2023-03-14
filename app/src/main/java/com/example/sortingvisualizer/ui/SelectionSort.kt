@@ -1,4 +1,4 @@
-package com.example.sortingvisualizer
+package com.example.sortingvisualizer.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,17 +8,21 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sortingvisualizer.MyAdaptor
+import com.example.sortingvisualizer.R
+import com.example.sortingvisualizer.row
+import com.example.sortingvisualizer.selection_sort_code
 import java.util.*
 
-class insertion_sort : AppCompatActivity() {
+class selectionSort : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_insertion_sort)
-        setTitle("Insertion Sort")
+        setContentView(R.layout.activity_selection_sort)
+        setTitle("Selection Sort")
         val codeBtn: CardView = findViewById(R.id.code)
 
         codeBtn.setOnClickListener(View.OnClickListener {
-            val go: Intent = Intent(this,insertion_sort_code::class.java)
+            val go: Intent = Intent(this, selection_sort_code::class.java)
             startActivity(go)
         })
 
@@ -58,20 +62,20 @@ class insertion_sort : AppCompatActivity() {
 
 //        var temp = mutableListOf<Int>()
         var dataToPass = mutableListOf<row>()
-        var i: Int = 1
+        var i: Int = 0
         var j: Int = 0
 
         dataToPass.add(row(listA[0],listA[1],listA[2],listA[3],listA[4],-1,-1))
-        while(i<5) {
-            var temp:Int = listA[i]
-            j = i-1
-            while(j>=0 && listA[j]>temp) {
-                listA[j+1] = listA[j]
-                j--
-                dataToPass.add(row(listA[0],listA[1],listA[2],listA[3],listA[4],j+1,i))
+        while(i<4) {
+            var temp:Int = i
+            j = i+1
+            while(j<5) {
+                if(listA[j]<listA[temp])
+                    temp = j
+                j++
             }
-            listA[j+1] = temp
-
+            Collections.swap(listA, i, temp)
+            dataToPass.add(row(listA[0],listA[1],listA[2],listA[3],listA[4],i,temp))
             i++
         }
 

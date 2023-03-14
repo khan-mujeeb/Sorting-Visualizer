@@ -1,10 +1,11 @@
-package com.example.sortingvisualizer
+package com.example.sortingvisualizer.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import com.example.sortingvisualizer.R
 
 class sorting_menu : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +25,7 @@ class sorting_menu : AppCompatActivity() {
 
         //intent to sorting mwnu to bubble sort
         bSort.setOnClickListener(View.OnClickListener {
-            intent = Intent(this,bubbleSort::class.java)
+            intent = Intent(this, bubbleSort::class.java)
             intent.putExtra("one", one)
             intent.putExtra("two", two)
             intent.putExtra("three", three)
@@ -37,7 +38,7 @@ class sorting_menu : AppCompatActivity() {
 
         //intent to sorting menu to selection sort
         sSort.setOnClickListener(View.OnClickListener {
-            intent = Intent(this,selectionSort::class.java)
+            intent = Intent(this, selectionSort::class.java)
             intent.putExtra("one", one)
             intent.putExtra("two", two)
             intent.putExtra("three", three)
@@ -48,7 +49,7 @@ class sorting_menu : AppCompatActivity() {
 
         val iSort = findViewById<TextView>(R.id.insertionSortBtn)
         iSort.setOnClickListener(View.OnClickListener {
-            intent = Intent(this,insertion_sort::class.java)
+            intent = Intent(this, insertion_sort::class.java)
             intent.putExtra("one", one)
             intent.putExtra("two", two)
             intent.putExtra("three", three)

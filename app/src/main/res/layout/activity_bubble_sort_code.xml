@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="18dp"
+    android:padding="10dp"
     android:background="@color/dark_blue"
     tools:context=".bubble_sort_code">
     <TextView
@@ -17,24 +17,24 @@
         android:layout_height="wrap_content"/>
     <TextView
         android:layout_width="match_parent"
-        android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textColor="@color/light_grey"
+        android:textSize="14sp"
         android:text="@string/bubble_sort_is_the_simplest_sorting_algorithm_that_works_by_repeatedly_swapping_the_adjacent_elements_if_they_are_in_the_wrong_order_this_algorithm_is_not_suitable_for_large_data_sets_as_its_average_and_worst_case_time_complexity_is_quite_high"
         android:layout_height="wrap_content"/>
 
     <TextView
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
-        android:textColor="@color/white"
+        android:textColor="@color/light_grey"
         android:textStyle="bold"
-        android:textSize="16sp"
+        android:textSize="15sp"
         android:text="@string/time_complexity_o_n2"
         android:layout_height="wrap_content"/>
 
     <TextView
         android:layout_width="match_parent"
-        android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textColor="@color/light_grey"
+        android:textSize="15sp"
         android:textStyle="bold"
         android:text="@string/auxiliary_space_o_1"
         android:layout_height="wrap_content"/>
