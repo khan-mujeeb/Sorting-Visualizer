@@ -20,13 +20,17 @@
         android:textAlignment="center"
         android:layout_height="wrap_content"/>
     <LinearLayout
+        android:gravity="center"
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_height="wrap_content">
         <TextView
+            
+            android:gravity="center"
             android:id="@+id/bsOne"
             android:textStyle="bold"
-            android:background="@color/red"
+            android:backgroundTint="@color/red"
+            android:background="@drawable/edit_text_bg"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textAlignment="center"
@@ -35,13 +39,16 @@
             android:text="1"
             android:textColor="@color/dark_blue"
             android:textSize="16sp"
-            android:layout_height="50dp">
+            android:layout_height="55dp">
         </TextView>
 
         <TextView
+            android:gravity="center"
+
             android:textColor="@color/dark_blue"
             android:id="@+id/bsTwo"
-            android:background="@color/red"
+            android:backgroundTint="@color/red"
+            android:background="@drawable/edit_text_bg"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:padding="10dp"
@@ -50,13 +57,16 @@
             android:textSize="16sp"
             android:layout_margin="2dp"
             android:textAlignment="center"
-            android:layout_height="50dp">
+            android:layout_height="55dp">
         </TextView>
 
         <TextView
+            android:gravity="center"
+
             android:textColor="@color/dark_blue"
             android:id="@+id/bsThree"
-            android:background="@color/red"
+            android:backgroundTint="@color/red"
+            android:background="@drawable/edit_text_bg"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textAlignment="center"
@@ -65,13 +75,16 @@
             android:textStyle="bold"
             android:textSize="16sp"
             android:layout_margin="2dp"
-            android:layout_height="50dp">
+            android:layout_height="55dp">
         </TextView>
 
         <TextView
             android:textColor="@color/dark_blue"
             android:id="@+id/bsFour"
-            android:background="@color/red"
+            android:backgroundTint="@color/red"
+            android:background="@drawable/edit_text_bg"
+            android:gravity="center"
+
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textStyle="bold"
@@ -80,22 +93,25 @@
             android:text="1"
             android:textSize="16sp"
             android:textAlignment="center"
-            android:layout_height="50dp">
+            android:layout_height="55dp">
         </TextView>
 
         <TextView
             android:textColor="@color/dark_blue"
             android:id="@+id/bsFive"
-            android:background="@color/red"
+            android:backgroundTint="@color/red"
+            android:background="@drawable/edit_text_bg"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:gravity="center"
+
             android:textAlignment="center"
             android:padding="10dp"
             android:textStyle="bold"
             android:text="1"
             android:textSize="16sp"
             android:layout_margin="2dp"
-            android:layout_height="50dp">
+            android:layout_height="55dp">
         </TextView>
     </LinearLayout>
 
@@ -112,20 +128,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
+        android:gravity="center"
+
         android:layout_height="wrap_content">
         <TextView
             android:textColor="@color/dark_blue"
             android:id="@+id/asOne"
+            android:gravity="center"
+
             android:padding="10dp"
             android:text="1"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:background="@color/green"
+            android:backgroundTint="@color/green"
+            android:background="@drawable/edit_text_bg"
             android:layout_width="0dp"
             android:textAlignment="center"
             android:layout_weight="1"
             android:layout_margin="2dp"
-            android:layout_height="50dp">
+            android:layout_height="55dp">
         </TextView>
 
         <TextView
@@ -133,29 +154,35 @@
             android:id="@+id/astwo"
             android:padding="10dp"
             android:text="1"
+            android:gravity="center"
+
             android:textStyle="bold"
             android:textSize="16sp"
-            android:background="@color/green"
+            android:backgroundTint="@color/green"
+            android:background="@drawable/edit_text_bg"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_margin="2dp"
             android:textAlignment="center"
-            android:layout_height="50dp">
+            android:layout_height="55dp">
         </TextView>
 
         <TextView
             android:textColor="@color/dark_blue"
+            android:gravity="center"
+
             android:id="@+id/asthree"
             android:padding="10dp"
             android:text="1"
             android:textStyle="bold"
             android:textSize="16sp"
-            android:background="@color/green"
+            android:backgroundTint="@color/green"
+            android:background="@drawable/edit_text_bg"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textAlignment="center"
             android:layout_margin="2dp"
-            android:layout_height="50dp">
+            android:layout_height="55dp">
         </TextView>
 
         <TextView
@@ -164,13 +191,16 @@
             android:padding="10dp"
             android:text="1"
             android:textStyle="bold"
+            android:gravity="center"
+
             android:textSize="16sp"
-            android:background="@color/green"
+            android:backgroundTint="@color/green"
+            android:background="@drawable/edit_text_bg"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textAlignment="center"
             android:layout_margin="2dp"
-            android:layout_height="50dp">
+            android:layout_height="55dp">
         </TextView>
 
         <TextView
@@ -179,13 +209,16 @@
             android:padding="10dp"
             android:text="1"
             android:textStyle="bold"
+            android:gravity="center"
+
             android:textSize="16sp"
-            android:background="@color/green"
+            android:backgroundTint="@color/green"
+            android:background="@drawable/edit_text_bg"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:textAlignment="center"
             android:layout_margin="2dp"
-            android:layout_height="50dp">
+            android:layout_height="55dp">
         </TextView>
     </LinearLayout>
 

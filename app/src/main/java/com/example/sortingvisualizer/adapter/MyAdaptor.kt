@@ -1,17 +1,16 @@
-package com.example.sortingvisualizer
+package com.example.sortingvisualizer.adapter
 
 import android.graphics.Color
 import android.view.LayoutInflater
-import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
 import android.widget.TextView
-import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
-import java.util.zip.Inflater
+import com.example.sortingvisualizer.R
+import com.example.sortingvisualizer.data.Row
 
-class MyAdaptor(val dataList: List<row>): RecyclerView.Adapter<MyAdaptor.MyViewHolder>() {
+class MyAdaptor(val dataList: List<Row>): RecyclerView.Adapter<MyAdaptor.MyViewHolder>() {
 
 
 
@@ -50,7 +49,7 @@ class MyAdaptor(val dataList: List<row>): RecyclerView.Adapter<MyAdaptor.MyViewH
         holder.itemView.startAnimation(
             AnimationUtils.loadAnimation(
                 holder.itemView.context,
-                 R.anim.rc_animation
+                R.anim.rc_animation
             )
         )
 

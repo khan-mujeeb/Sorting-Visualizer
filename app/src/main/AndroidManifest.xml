@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SortingVisualizer">
         <activity
+            android:name=".CodeActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.splashScreen"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,9 +44,11 @@
             android:exported="false" />
         <activity
             android:name=".ui.MainActivity"
-            android:exported="false">
+            android:exported="false"></activity>
 
-        </activity>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

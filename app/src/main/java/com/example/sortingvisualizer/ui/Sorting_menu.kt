@@ -14,11 +14,7 @@ class sorting_menu : AppCompatActivity() {
 
         setTitle("Menu")
         //getting values from the intent
-        val one = intent.getStringExtra("one")
-        val two = intent.getStringExtra("two")
-        val three = intent.getStringExtra("three")
-        val four = intent.getStringExtra("four")
-        val five = intent.getStringExtra("five")
+        val list = intent.getIntegerArrayListExtra("list")
 
         //geting references
         val bSort = findViewById<TextView>(R.id.buubleSortBtn)
@@ -26,11 +22,7 @@ class sorting_menu : AppCompatActivity() {
         //intent to sorting mwnu to bubble sort
         bSort.setOnClickListener(View.OnClickListener {
             intent = Intent(this, bubbleSort::class.java)
-            intent.putExtra("one", one)
-            intent.putExtra("two", two)
-            intent.putExtra("three", three)
-            intent.putExtra("four", four)
-            intent.putExtra("five", five)
+            intent.putIntegerArrayListExtra("list", list)
             startActivity(intent)
         })
 
@@ -39,22 +31,14 @@ class sorting_menu : AppCompatActivity() {
         //intent to sorting menu to selection sort
         sSort.setOnClickListener(View.OnClickListener {
             intent = Intent(this, selectionSort::class.java)
-            intent.putExtra("one", one)
-            intent.putExtra("two", two)
-            intent.putExtra("three", three)
-            intent.putExtra("four", four)
-            intent.putExtra("five", five)
+            intent.putIntegerArrayListExtra("list", list)
             startActivity(intent)
         })
 
         val iSort = findViewById<TextView>(R.id.insertionSortBtn)
         iSort.setOnClickListener(View.OnClickListener {
             intent = Intent(this, insertion_sort::class.java)
-            intent.putExtra("one", one)
-            intent.putExtra("two", two)
-            intent.putExtra("three", three)
-            intent.putExtra("four", four)
-            intent.putExtra("five", five)
+            intent.putIntegerArrayListExtra("list", list)
             startActivity(intent)
         })
 

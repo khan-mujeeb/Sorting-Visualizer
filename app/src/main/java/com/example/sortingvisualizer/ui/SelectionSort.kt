@@ -8,13 +8,16 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.sortingvisualizer.MyAdaptor
+import com.example.sortingvisualizer.CodeActivity
+import com.example.sortingvisualizer.adapter.MyAdaptor
 import com.example.sortingvisualizer.R
-import com.example.sortingvisualizer.row
-import com.example.sortingvisualizer.selection_sort_code
+import com.example.sortingvisualizer.data.Row
+import com.example.sortingvisualizer.databinding.ActivitySelectionSortBinding
 import java.util.*
 
 class selectionSort : AppCompatActivity() {
+
+    lateinit var binding: ActivitySelectionSortBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_selection_sort)
@@ -22,25 +25,15 @@ class selectionSort : AppCompatActivity() {
         val codeBtn: CardView = findViewById(R.id.code)
 
         codeBtn.setOnClickListener(View.OnClickListener {
-            val go: Intent = Intent(this, selection_sort_code::class.java)
+            val go: Intent = Intent(this, CodeActivity::class.java)
+            go.putExtra("algo", "ssort")
             startActivity(go)
         })
 
-        // getting values from sorting_menu by a intent
-        val one = intent.getStringExtra("one")
-        val two = intent.getStringExtra("two")
-        val three = intent.getStringExtra("three")
-        val four = intent.getStringExtra("four")
-        val five = intent.getStringExtra("five")
 
-        //making of list
-        var listA = mutableListOf(-1)
-        listA.add(Integer.parseInt(one))
-        listA.add(Integer.parseInt(two))
-        listA.add(Integer.parseInt(three))
-        listA.add(Integer.parseInt(four))
-        listA.add(Integer.parseInt(five))
-        listA.removeFirst()
+
+
+        val listA = intent.getIntegerArrayListExtra("list")!!
 
         //setting the element of unsorted array
         val ele1 = findViewById<TextView>(R.id.bsOne)
@@ -49,11 +42,12 @@ class selectionSort : AppCompatActivity() {
         val ele4 = findViewById<TextView>(R.id.bsFour)
         val ele5 = findViewById<TextView>(R.id.bsFive)
 
-        ele1.text = one
-        ele2.text = two
-        ele3.text = three
-        ele4.text = four
-        ele5.text = five
+        ele1.text = listA[0].toString()
+        ele2.text = listA[1].toString()
+        ele3.text = listA[2].toString()
+        ele4.text = listA[3].toString()
+        ele5.text = listA[4].toString()
+
 
 
         //bubble sort algorithm
@@ -61,11 +55,11 @@ class selectionSort : AppCompatActivity() {
 //        var i: Int = 0
 
 //        var temp = mutableListOf<Int>()
-        var dataToPass = mutableListOf<row>()
+        var dataToPass = mutableListOf<Row>()
         var i: Int = 0
         var j: Int = 0
 
-        dataToPass.add(row(listA[0],listA[1],listA[2],listA[3],listA[4],-1,-1))
+        dataToPass.add(Row(listA[0],listA[1],listA[2],listA[3],listA[4],-1,-1))
         while(i<4) {
             var temp:Int = i
             j = i+1
@@ -75,11 +69,11 @@ class selectionSort : AppCompatActivity() {
                 j++
             }
             Collections.swap(listA, i, temp)
-            dataToPass.add(row(listA[0],listA[1],listA[2],listA[3],listA[4],i,temp))
+            dataToPass.add(Row(listA[0],listA[1],listA[2],listA[3],listA[4],i,temp))
             i++
         }
 
-        dataToPass.add(row(listA[0],listA[1],listA[2],listA[3],listA[4],-1,-1))
+        dataToPass.add(Row(listA[0],listA[1],listA[2],listA[3],listA[4],-1,-1))
         //setting content of sorted array
         val e1 = findViewById<TextView>(R.id.asOne)
         val e2 = findViewById<TextView>(R.id.astwo)

@@ -78,31 +78,31 @@ class MainActivity : AppCompatActivity() {
         })
 
 
-
         // intent from main activity to sorting menu
         sortBtn.setOnClickListener(View.OnClickListener {
             //making array of nums
-            val num1:String = val1.text.toString()
-            val num2:String = val2.text.toString()
-            val num3:String = val3.text.toString()
-            val num4:String = val4.text.toString()
-            val num5:String = val5.text.toString()
-            if(num1.trim().isEmpty() || num2.trim().isEmpty() || num3.trim().isEmpty() || num4.trim().isEmpty()|| num5.trim()
+            var num1 = val1.text.toString()
+            val num2 = val2.text.toString()
+            val num3 = val3.text.toString()
+            val num4 = val4.text.toString()
+            val num5 = val5.text.toString()
+            if (num1.trim().isEmpty() || num2.trim().isEmpty() || num3.trim()
+                    .isEmpty() || num4.trim().isEmpty() || num5.trim()
                     .isEmpty()
-            ){
-                Toast.makeText(this,"Enter all values",Toast.LENGTH_LONG).show()
-            }
-            else{
-                val intent:Intent = Intent(this, sorting_menu::class.java)
+            ) {
+                Toast.makeText(this, "Enter all values", Toast.LENGTH_LONG).show()
+            } else {
+                val intent = Intent(this, sorting_menu::class.java)
 
-
+                val list = ArrayList<Int>()
+                list.add(num1.toInt())
+                list.add(num2.toInt())
+                list.add(num3.toInt())
+                list.add(num4.toInt())
+                list.add(num5.toInt())
 
                 //passing values from one intent to other
-                intent.putExtra("one", num1)
-                intent.putExtra("two", num2)
-                intent.putExtra("three", num3)
-                intent.putExtra("four", num4)
-                intent.putExtra("five", num5)
+                intent.putIntegerArrayListExtra("list", list)
                 startActivity(intent)
             }
 
